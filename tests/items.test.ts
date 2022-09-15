@@ -39,3 +39,7 @@ describe('Testa GET /items/:id ', () => {
     expect(result.status).toEqual(404)
   });
 });
+
+afterAll(async () => {
+  await prisma.$disconnect();
+})
